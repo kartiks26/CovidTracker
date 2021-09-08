@@ -1,0 +1,6 @@
+npm i --save redux-logger
+npm install react-router-dom
+************IF NOT Working Then*************
+npm install react-redux
+npm install @types/react-redux
+npm install --save redux-thunk
