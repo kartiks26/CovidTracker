@@ -1,38 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+
 .App {
-  text-align: center;
+	text-align: center;
+	font-family: "Ubuntu", sans-serif;
+	padding: 0;
+	margin: 0;
+}
+body {
+	/* background-color: #eaeaea; */
+	z-index: -1;
+}
+.mainPage {
+	background-color: rgb(255, 255, 255);
+	height: 100vh;
+	display: flex;
+	justify-content: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar {
+	position: fixed;
+	z-index: 3;
+	background-color: #012a36;
+	height: 67px;
+	width: 100vw;
+	border-bottom-right-radius: 36px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.navbar h1 {
+	position: absolute;
+	left: 25px;
+	color: #6fc7ad;
+	font-size: 24px;
+	letter-spacing: 2px;
+}
+.navbar ul {
+	position: absolute;
+	right: 0;
+	display: flex;
+	-ms-flex-align: end;
+	align-items: center;
+	list-style-type: none;
+	justify-content: space-between;
+}
+.navbar ul li {
+	font-size: 20px;
+	font-weight: 500;
+	margin-right: 50px;
+	color: #439a86;
+	text-align: center;
+	cursor: pointer;
+}
+.SearchBar {
+	position: absolute;
+	top: 200px;
+}
+.SearchBar input {
+	width: 443px;
+	height: 20px;
+	margin-right: 25px;
+	border-style: none;
+	padding: 10px;
+	background-color: #1c3144;
+	padding-left: 40px;
+	color: #eaeaea;
+	font-size: 15px;
+	border-radius: 5px;
+}
+:focus {
+	outline: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.SearchBar button {
+	width: 100px;
+	height: 45px;
+	border-radius: 50px;
+	border-style: none;
+	background-color: #439a86;
+	color: #eaeaea;
+	font-size: 15px;
+}
+::-webkit-input-placeholder {
+	/* Edge */
+	color: #707070;
+}
+.indicators {
+	position: absolute;
+	top: 350px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.indicator {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 324px;
+	margin: 25px;
+	height: 200px;
+	border-radius: 20px;
+	background-color: #ffffff;
+
+	border-radius: 39px;
+	box-shadow: -27px 27px 29px #b0b0b0, 27px -27px 29px #eaeaea;
+}
+.indicator h6 {
+	margin: 0;
+	padding: 10px;
+	position: relative;
+	font-size: x-large;
+}
+/* .more {
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	font-size: small;
+	font-weight: 900;
+	bottom: 0;
+} */
+p {
+	cursor: pointer;
+	padding: 0;
+	margin: 0;
+}
+img {
+	padding: 0;
+	margin: 0;
+	width: 50px;
+	height: 50px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.Charts {
+	display: flex;
+	width: 50vw;
+	height: 52vh;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	align-self: center;
+	background-color: #eaeaea;
 }
 
-.App-link {
-  color: #61dafb;
+::-webkit-scrollbar {
+	width: 0px;
+}
+.containerGraph {
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#graph h1 {
+	margin-bottom: 80px;
+}
+
+.Group {
+	z-index: 15;
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #012a36;
+}
+.dropdown {
+	width: 100vw;
+}
+.okk {
+	display: flex;
+	align-self: center;
+	justify-content: center;
+	height: 90vh;
+	width: 100vw;
+}
+.PieChart {
+	width: 67vw;
+	height: 80vh;
+	margin-bottom: 80px;
+}
+
+#myChart {
+	margin-bottom: 60px;
+	padding: 20px;
+	border-radius: 39px;
+	align-self: center;
+	margin: 80px;
+	box-shadow: -27px 27px 29px #b0b0b0, 27px -27px 29px #eaeaea;
+}
+.mapContainer {
+	/* width: 45vw;
+	height: 70vh;
+	margin: 50px; */
+
+	/* height: 100%;
+	width: 100%; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin-bottom: 180px;
+}
+.mapContainer h1 {
+	margin-bottom: 60px;
+}
+.leaflet-container {
+	position: relative;
+
+	align-self: center;
+	width: 55vw;
+	height: 60vh;
+	z-index: 1;
+	border-radius: 39px;
+	box-shadow: -27px 27px 29px #b0b0b0, 27px -27px 29px #eaeaea;
+}
+.Carousel {
+	width: 100vw;
+	height: 100vh;
+	background-color: #012a36;
 }
