@@ -48,7 +48,9 @@ function App() {
 		}
 		console.log(stateData);
 	};
-
+	setTimeout(() => {
+		SetStateData();
+	}, 50);
 	return (
 		<div className="App">
 			<header className="mainPage">
@@ -112,7 +114,6 @@ function App() {
 					</datalist>
 					<button
 						onClick={() => {
-							console.log("clicked", state);
 							SetStateData();
 						}}
 					>
